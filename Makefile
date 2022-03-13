@@ -7,7 +7,7 @@ NODEMODULES=\
 # change this for your own environment
 TOOLS=.
 
-all: $(NODEMODULES) tools helloworld.json
+all: $(NODEMODULES) tools helloworld.json helloworld.py
 
 node_modules/ohm-js:
 	npm install ohm-js
@@ -27,6 +27,11 @@ tools:
 
 helloworld.json : tools helloworld.drawio
 	./generate.bash $(TOOLS) helloworld.drawio
+
+helloworld.py : helloworld.json
+	./transpile2py.bash helloworld.drawio out.json
+	chmod a+x top.py
+	./top.py
 
 clean:
 	(cd ./dr ; make clean)
