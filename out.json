@@ -1,0 +1,187 @@
+[
+  [
+    {
+      "children": ["tools", "helloworld.py", "clean" ],
+      "connections": [
+	{
+	  "receivers": [ {"receiver": {"component":"tools", "port":""}} ],
+	  "senders": [ {"sender": {"component":"clean", "port":"baton"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"clean", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"clean", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"clean", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"clean", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"clean", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"clean", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"clean", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"clean", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"helloworld.py", "port":""}} ],
+	  "senders": [ {"sender": {"component":"tools", "port":"baton"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"tools", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"tools", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"tools", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"tools", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"tools", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"tools", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"tools", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"tools", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"baton"}} ],
+	  "senders": [ {"sender": {"component":"helloworld.py", "port":"baton"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"baton"}} ],
+	  "senders": [ {"sender": {"component":"helloworld.py", "port":"baton"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"baton"}} ],
+	  "senders": [ {"sender": {"component":"helloworld.py", "port":"baton"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"baton"}} ],
+	  "senders": [ {"sender": {"component":"helloworld.py", "port":"baton"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"baton"}} ],
+	  "senders": [ {"sender": {"component":"helloworld.py", "port":"baton"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"baton"}} ],
+	  "senders": [ {"sender": {"component":"helloworld.py", "port":"baton"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"baton"}} ],
+	  "senders": [ {"sender": {"component":"helloworld.py", "port":"baton"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"baton"}} ],
+	  "senders": [ {"sender": {"component":"helloworld.py", "port":"baton"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"helloworld.py", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"helloworld.py", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"helloworld.py", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"helloworld.py", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"helloworld.py", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"helloworld.py", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"helloworld.py", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"d2py", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"helloworld.py", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"clean", "port":""}} ],
+	  "senders": [ {"sender": {"component":"d2py", "port":""}} ]
+	}
+      ],
+      "id":"cell_6",
+      "inputs": ["" ],
+      "name":"d2py",
+      "outputs": ["baton", "quit" ],
+      "synccode":""
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_7",
+      "inputs": ["" ],
+      "name":"tools",
+      "outputs": ["baton", "quit" ],
+      "synccode":"&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;make_process = subprocess.Popen(&quot;make tools&quot;, stderr=subprocess.STDOUT)&lt;br/&gt;if make_process.wait() != 0:&lt;br/&gt;    send (&quot;quit&quot;, &quot;make tools&quot;)&lt;br/&gt;else&lt;br/&gt;    send (&quot;baton&quot;, True)&lt;/span&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_8",
+      "inputs": ["" ],
+      "name":"helloworld.py",
+      "outputs": ["baton", "quit" ],
+      "synccode":"&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;make_process = subprocess.Popen(&quot;make helloworld.py&quot;, stderr=subprocess.STDOUT)&lt;br&gt;if make_process.wait() != 0:&lt;br&gt;    send (&quot;quit&quot;, &quot;make helloworld.py&quot;)&lt;br&gt;else&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/span&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_9",
+      "inputs": ["" ],
+      "name":"clean",
+      "outputs": ["baton", "quit" ],
+      "synccode":"&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;make_process = subprocess.Popen(&quot;make clean&quot;, stderr=subprocess.STDOUT)&lt;br&gt;if make_process.wait() != 0:&lt;br&gt;     send (&quot;quit&quot;, &quot;make clean&quot;)&lt;br&gt;else&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/span&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ]
+]

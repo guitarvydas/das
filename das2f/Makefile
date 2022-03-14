@@ -1,3 +1,27 @@
+QUERYSOURCES=\
+connection.md \
+contains_edge1.md \
+contains_edge2.md \
+contains_edge3.md \
+contains_port.md \
+direct_contains.md \
+indirect_contains.md \
+layer2.md \
+layerallcontains.md \
+layerboundingbox.md \
+layercolor.md \
+layerdirection.md \
+layerkind.md \
+layername.md \
+synccode.md \
+view0.md \
+view0b.md \
+view0c.md \
+view1.md \
+view2.md \
+view3.md \
+view_2.md
+
 QUERIES=\
 layer4_query.bash \
 layer5_query.bash \
@@ -15,14 +39,9 @@ layername_query.bash \
 layersynccode_query.bash
 
 
-all: firsttime
+all: $(QUERIES)
 
-
-firsttime: build
-
-build: $(QUERIES)
-
-$(QUERIES) :
+$(QUERIES) : $(QUERYSOURCES)
 	./build.bash ..
 
 clean:

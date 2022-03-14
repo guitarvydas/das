@@ -15,7 +15,7 @@
   das_fact(direct_contains,Parent,Edge)
 ## display
 das_fact(connection, ${Parent}, ${Edge}).
-das_fact(sender, ${Edge}, sender{component:${Sender.component},port:${Sender.port}}).
-das_fact(receiver, ${Edge}, receiver{component:${Receiver.component},port:${Receiver.port}}).
+das_fact(sender, ${Edge}, sender{component:"${Sender.component}",port:"${Sender.port}"}).
+das_fact(receiver, ${Edge}, receiver{component:"${Receiver.component}",port:"${Receiver.port}"}).
 
 

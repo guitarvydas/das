@@ -59,7 +59,9 @@ ${das2fdir}/layersynccode ${das2fdir} 1>&2 #<<>>fb.pl
 
 # Layer Connections.
 echo '** layer connections **' 1>&2
+cp fb.pl _connections0.fb.pl
 ${das2fdir}/layerconnection ${das2fdir} 1>&2 #<<>>fb.pl
+cp fb.pl _connections1.fb.pl
 
 
 
