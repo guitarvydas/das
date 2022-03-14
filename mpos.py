@@ -142,6 +142,15 @@ class Component:
             return (0 < len (self.outputBucket))
 
 
+        def panic (self, message):
+            print ("\n*****")
+            print (message, file=sys.stderr)
+            print ("*****\n")
+            sys.exit (1)
+            
+        def quit (self, message):
+            self.panic (message)
+
 class Leaf (Component):
     pass
 
@@ -164,12 +173,6 @@ class Container (Component):
             msg = InputMessage (r.component, r.tag, m.data)
             instance = self.mapNameToInstance (r.component)
             instance.enqueueInput (msg)
-
-    def panic (self, message):
-        print ("\n*****")
-        print (message, file=sys.stderr)
-        print ("*****\n")
-        sys.exit (1)
         
     def findConnectionBasedOnMessage (self, m):
         for conn in self.connections:

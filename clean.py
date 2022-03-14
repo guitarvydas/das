@@ -13,10 +13,9 @@ class _clean (mpos.Leaf):
     def react (self, inputMessage):
         import subprocess
         import sys
-        rc = subprocess.run (["make", "clean"])
-        print (rc, file=sys.stderr)
-        if rc != 0:
-             self.send ("quit", "make clean")
+        r = subprocess.run (["make", "clean"])
+        if (r.returncode != 0):
+             self.send ("quit", f"error {r} in make clean")
         else:
             self.send ("baton", True)
         return super ().react (inputMessage)

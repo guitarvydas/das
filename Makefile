@@ -39,8 +39,9 @@ d2py.json : tools d2py.drawio
 
 d2py.py : d2py.json transpile2py.bash pyemit.py
 	./transpile2py.bash d2py.drawio d2py.json
-	chmod a+x top.py
-	./top.py
+	mv top.py topd2py.py
+	chmod a+x topd2py.py
+	./topd2py.py
 
 clean:
 	(cd ./dr ; make clean)

@@ -1,4 +1,4 @@
-clear
+#!/bin/bash
 cwd=`pwd`
 prep=../prep/prep
 # PROLOG support files (*.pl) are found in ../das2f
