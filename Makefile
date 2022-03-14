@@ -35,8 +35,10 @@ helloworld.py : helloworld.json
 
 d2py.json : tools d2py.drawio
 	./generate.bash $(TOOLS) d2py.drawio
+	mv out.json d2py.json
 
-d2py.py : 2py.json
+d2py.py : d2py.json transpile2py.bash pyemit.py
+	mv d2py.json out.json
 	./transpile2py.bash d2py.drawio out.json
 	chmod a+x top.py
 	./top.py
