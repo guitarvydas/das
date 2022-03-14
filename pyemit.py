@@ -214,7 +214,6 @@ def printScript (component, outf):
 for componentArray in data:
   for component in componentArray:
     fname = component["name"] + ".py"
-    print (fname, file=sys.stderr)
     with open (fname, "w") as script:
       printScript (component, script)
 
