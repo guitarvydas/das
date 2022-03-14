@@ -351,7 +351,7 @@ diagram_fact(value, cell_27, "quit").
 diagram_fact(value, cell_29, "").
 diagram_fact(value, cell_30, "baton").
 diagram_fact(value, cell_31, "quit").
-diagram_fact(value, cell_6, "maked2py").
+diagram_fact(value, cell_6, "d2py").
 diagram_fact(value, cell_7, "tools").
 diagram_fact(value, cell_8, "helloworld.py").
 diagram_fact(value, cell_9, "clean").
@@ -413,28 +413,28 @@ diagram_fact(width, cell_29, 40).
 diagram_fact(width, cell_30, 40).
 diagram_fact(width, cell_31, 40).
 diagram_fact(width, cell_6, 930).
-diagram_fact(width, cell_7, 705.0,6).
+diagram_fact(width, cell_7, 705.06).
 diagram_fact(width, cell_8, 700).
-diagram_fact(width, cell_9, 705.0,6).
-diagram_fact(x, cell_10, 227.4,7).
-diagram_fact(x, cell_11, 227.4,7).
-diagram_fact(x, cell_12, 214.9,4).
-diagram_fact(x, cell_13, 154.9,4).
-diagram_fact(x, cell_15, 859.9,4).
-diagram_fact(x, cell_17, 859.9,4).
-diagram_fact(x, cell_18, 164.9,4).
-diagram_fact(x, cell_20, 869.9,4).
-diagram_fact(x, cell_22, 869.9,4).
-diagram_fact(x, cell_23, 164.9,4).
-diagram_fact(x, cell_25, 864.9,4).
-diagram_fact(x, cell_27, 864.9,4).
+diagram_fact(width, cell_9, 705.06).
+diagram_fact(x, cell_10, 227.47).
+diagram_fact(x, cell_11, 227.47).
+diagram_fact(x, cell_12, 214.94).
+diagram_fact(x, cell_13, 154.94).
+diagram_fact(x, cell_15, 859.94).
+diagram_fact(x, cell_17, 859.94).
+diagram_fact(x, cell_18, 164.94).
+diagram_fact(x, cell_20, 869.94).
+diagram_fact(x, cell_22, 869.94).
+diagram_fact(x, cell_23, 164.94).
+diagram_fact(x, cell_25, 864.94).
+diagram_fact(x, cell_27, 864.94).
 diagram_fact(x, cell_29, 50).
 diagram_fact(x, cell_30, 980).
 diagram_fact(x, cell_31, 980).
 diagram_fact(x, cell_6, 70).
-diagram_fact(x, cell_7, 184.9,4).
-diagram_fact(x, cell_8, 184.9,4).
-diagram_fact(x, cell_9, 174.9,4).
+diagram_fact(x, cell_7, 184.94).
+diagram_fact(x, cell_8, 184.94).
+diagram_fact(x, cell_9, 174.94).
 diagram_fact(y, cell_10, 145).
 diagram_fact(y, cell_11, 367.5).
 diagram_fact(y, cell_12, 580.5).
@@ -497,7 +497,7 @@ das_fact(name, cell_27, "quit").
 das_fact(name, cell_29, "").
 das_fact(name, cell_30, "baton").
 das_fact(name, cell_31, "quit").
-das_fact(name, cell_6, "maked2py").
+das_fact(name, cell_6, "d2py").
 das_fact(name, cell_7, "tools").
 das_fact(name, cell_8, "helloworld.py").
 das_fact(name, cell_9, "clean").
@@ -529,6 +529,54 @@ das_fact(color,cell_6,"-").
 das_fact(color,cell_7,"-").
 das_fact(color,cell_8,"-").
 das_fact(color,cell_9,"-").
+das_fact(bbL,cell_10,227.47).
+  das_fact(bbT,cell_10,145).
+  das_fact(bbR,cell_10,827.47).
+  das_fact(bbB,cell_10,240).
+das_fact(bbL,cell_11,227.47).
+  das_fact(bbT,cell_11,367.5).
+  das_fact(bbR,cell_11,827.47).
+  das_fact(bbB,cell_11,455).
+das_fact(bbL,cell_12,214.94).
+  das_fact(bbT,cell_12,580.5).
+  das_fact(bbR,cell_12,854.94).
+  das_fact(bbB,cell_12,670.5).
+das_fact(bbL,cell_13,154.94).
+  das_fact(bbT,cell_13,172.5).
+  das_fact(bbR,cell_13,194.94).
+  das_fact(bbB,cell_13,212.5).
+das_fact(bbL,cell_15,859.94).
+  das_fact(bbT,cell_15,140).
+  das_fact(bbR,cell_15,899.94).
+  das_fact(bbB,cell_15,180).
+das_fact(bbL,cell_17,859.94).
+  das_fact(bbT,cell_17,200).
+  das_fact(bbR,cell_17,899.94).
+  das_fact(bbB,cell_17,240).
+das_fact(bbL,cell_18,164.94).
+  das_fact(bbT,cell_18,387.5).
+  das_fact(bbR,cell_18,204.94).
+  das_fact(bbB,cell_18,427.5).
+das_fact(bbL,cell_20,869.94).
+  das_fact(bbT,cell_20,355).
+  das_fact(bbR,cell_20,909.94).
+  das_fact(bbB,cell_20,395).
+das_fact(bbL,cell_22,869.94).
+  das_fact(bbT,cell_22,415).
+  das_fact(bbR,cell_22,909.94).
+  das_fact(bbB,cell_22,455).
+das_fact(bbL,cell_23,164.94).
+  das_fact(bbT,cell_23,605.5).
+  das_fact(bbR,cell_23,204.94).
+  das_fact(bbB,cell_23,645.5).
+das_fact(bbL,cell_25,864.94).
+  das_fact(bbT,cell_25,575.5).
+  das_fact(bbR,cell_25,904.94).
+  das_fact(bbB,cell_25,615.5).
+das_fact(bbL,cell_27,864.94).
+  das_fact(bbT,cell_27,635.5).
+  das_fact(bbR,cell_27,904.94).
+  das_fact(bbB,cell_27,675.5).
 das_fact(bbL,cell_29,50).
   das_fact(bbT,cell_29,172.5).
   das_fact(bbR,cell_29,90).
@@ -545,6 +593,18 @@ das_fact(bbL,cell_6,70).
   das_fact(bbT,cell_6,60).
   das_fact(bbR,cell_6,1000).
   das_fact(bbB,cell_6,760).
+das_fact(bbL,cell_7,184.94).
+  das_fact(bbT,cell_7,335).
+  das_fact(bbR,cell_7,890).
+  das_fact(bbB,cell_7,480).
+das_fact(bbL,cell_8,184.94).
+  das_fact(bbT,cell_8,553).
+  das_fact(bbR,cell_8,884.94).
+  das_fact(bbB,cell_8,698).
+das_fact(bbL,cell_9,174.94).
+  das_fact(bbT,cell_9,120).
+  das_fact(bbR,cell_9,880).
+  das_fact(bbB,cell_9,265).
 das_fact(direction,cell_13,input).
 das_fact(direction,cell_15,output).
 das_fact(direction,cell_17,output).
@@ -557,9 +617,110 @@ das_fact(direction,cell_27,output).
 das_fact(direction,cell_29,input).
 das_fact(direction,cell_30,output).
 das_fact(direction,cell_31,output).
+das_fact(contains,cell_6,cell_10).
+das_fact(contains,cell_9,cell_10).
+das_fact(contains,cell_6,cell_11).
+das_fact(contains,cell_7,cell_11).
+das_fact(contains,cell_6,cell_12).
+das_fact(contains,cell_8,cell_12).
+das_fact(contains,cell_6,cell_13).
+das_fact(contains,cell_6,cell_15).
+das_fact(contains,cell_6,cell_17).
+das_fact(contains,cell_6,cell_18).
+das_fact(contains,cell_6,cell_20).
+das_fact(contains,cell_6,cell_22).
+das_fact(contains,cell_6,cell_23).
+das_fact(contains,cell_6,cell_25).
+das_fact(contains,cell_6,cell_27).
+das_fact(contains,cell_6,cell_7).
+das_fact(contains,cell_6,cell_8).
+das_fact(contains,cell_6,cell_9).
 das_fact(contains,cell_6,cell_29).
 das_fact(contains,cell_6,cell_30).
 das_fact(contains,cell_6,cell_31).
+das_fact(contains,cell_7,cell_18).
+das_fact(contains,cell_7,cell_20).
+das_fact(contains,cell_7,cell_22).
+das_fact(contains,cell_8,cell_23).
+das_fact(contains,cell_8,cell_25).
+das_fact(contains,cell_8,cell_27).
+das_fact(contains,cell_9,cell_13).
+das_fact(contains,cell_9,cell_15).
+das_fact(contains,cell_9,cell_17).
+das_fact(indirect_contains,cell_6,cell_11).
+das_fact(indirect_contains,cell_6,cell_18).
+das_fact(indirect_contains,cell_6,cell_20).
+das_fact(indirect_contains,cell_6,cell_22).
+das_fact(indirect_contains,cell_6,cell_12).
+das_fact(indirect_contains,cell_6,cell_23).
+das_fact(indirect_contains,cell_6,cell_25).
+das_fact(indirect_contains,cell_6,cell_27).
+das_fact(indirect_contains,cell_6,cell_10).
+das_fact(indirect_contains,cell_6,cell_13).
+das_fact(indirect_contains,cell_6,cell_15).
+das_fact(indirect_contains,cell_6,cell_17).
+das_fact(direct_contains,cell_6,cell_29).
+das_fact(direct_contains,cell_6,cell_30).
+das_fact(direct_contains,cell_6,cell_31).
+das_fact(direct_contains,cell_6,cell_7).
+das_fact(direct_contains,cell_6,cell_8).
+das_fact(direct_contains,cell_6,cell_9).
+das_fact(direct_contains,cell_7,cell_11).
+das_fact(direct_contains,cell_7,cell_18).
+das_fact(direct_contains,cell_7,cell_20).
+das_fact(direct_contains,cell_7,cell_22).
+das_fact(direct_contains,cell_8,cell_12).
+das_fact(direct_contains,cell_8,cell_23).
+das_fact(direct_contains,cell_8,cell_25).
+das_fact(direct_contains,cell_8,cell_27).
+das_fact(direct_contains,cell_9,cell_10).
+das_fact(direct_contains,cell_9,cell_13).
+das_fact(direct_contains,cell_9,cell_15).
+das_fact(direct_contains,cell_9,cell_17).
+das_fact(direct_contains,cell_6,cell_14).
+das_fact(direct_contains,cell_6,cell_16).
+das_fact(direct_contains,cell_6,cell_19).
+das_fact(direct_contains,cell_6,cell_21).
+das_fact(direct_contains,cell_6,cell_24).
+das_fact(direct_contains,cell_6,cell_26).
+das_fact(direct_contains,cell_6,cell_28).
+das_fact(direct_contains,cell_6,cell_16).
+das_fact(direct_contains,cell_6,cell_21).
+das_fact(direct_contains,cell_6,cell_24).
+das_fact(direct_contains,cell_6,cell_26).
 das_fact(codebox,cell_10,"&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;make_process = subprocess.Popen(&quot;make clean&quot;, stderr=subprocess.STDOUT)&lt;br&gt;if make_process.wait() != 0:&lt;br&gt;     send (&quot;quit&quot;, &quot;make clean&quot;)&lt;br&gt;else&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/span&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
 das_fact(codebox,cell_11,"&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;make_process = subprocess.Popen(&quot;make tools&quot;, stderr=subprocess.STDOUT)&lt;br/&gt;if make_process.wait() != 0:&lt;br/&gt;    send (&quot;quit&quot;, &quot;make tools&quot;)&lt;br/&gt;else&lt;br/&gt;    send (&quot;baton&quot;, True)&lt;/span&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
 das_fact(codebox,cell_12,"&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;make_process = subprocess.Popen(&quot;make helloworld.py&quot;, stderr=subprocess.STDOUT)&lt;br&gt;if make_process.wait() != 0:&lt;br&gt;    send (&quot;quit&quot;, &quot;make helloworld.py&quot;)&lt;br&gt;else&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/span&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
+das_fact(connection, cell_6, cell_14).
+das_fact(sender, cell_14, sender{component:clean,port:baton}).
+das_fact(receiver, cell_14, receiver{component:tools,port:}).
+das_fact(connection, cell_6, cell_16).
+das_fact(sender, cell_16, sender{component:clean,port:quit}).
+das_fact(receiver, cell_16, receiver{component:d2py,port:quit}).
+das_fact(connection, cell_6, cell_16).
+das_fact(sender, cell_16, sender{component:clean,port:quit}).
+das_fact(receiver, cell_16, receiver{component:d2py,port:quit}).
+das_fact(connection, cell_6, cell_19).
+das_fact(sender, cell_19, sender{component:tools,port:baton}).
+das_fact(receiver, cell_19, receiver{component:helloworld.py,port:}).
+das_fact(connection, cell_6, cell_21).
+das_fact(sender, cell_21, sender{component:tools,port:quit}).
+das_fact(receiver, cell_21, receiver{component:d2py,port:quit}).
+das_fact(connection, cell_6, cell_21).
+das_fact(sender, cell_21, sender{component:tools,port:quit}).
+das_fact(receiver, cell_21, receiver{component:d2py,port:quit}).
+das_fact(connection, cell_6, cell_24).
+das_fact(sender, cell_24, sender{component:helloworld.py,port:baton}).
+das_fact(receiver, cell_24, receiver{component:d2py,port:baton}).
+das_fact(connection, cell_6, cell_24).
+das_fact(sender, cell_24, sender{component:helloworld.py,port:baton}).
+das_fact(receiver, cell_24, receiver{component:d2py,port:baton}).
+das_fact(connection, cell_6, cell_26).
+das_fact(sender, cell_26, sender{component:helloworld.py,port:quit}).
+das_fact(receiver, cell_26, receiver{component:d2py,port:quit}).
+das_fact(connection, cell_6, cell_26).
+das_fact(sender, cell_26, sender{component:helloworld.py,port:quit}).
+das_fact(receiver, cell_26, receiver{component:d2py,port:quit}).
+das_fact(connection, cell_6, cell_28).
+das_fact(sender, cell_28, sender{component:d2py,port:}).
+das_fact(receiver, cell_28, receiver{component:clean,port:}).

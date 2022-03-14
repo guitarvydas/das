@@ -4,7 +4,6 @@
 # where <root> is a directory (typically ..) where prep/prep can be found
 # where <drawing> is the name of a .drawio file
 # example usage: ./d2f.bash .. ./helloworld.drawio
-set -x
 root=$1
 name=$2
 d2fdir=$root/d2f
