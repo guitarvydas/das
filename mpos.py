@@ -165,12 +165,17 @@ class Container (Component):
             instance = self.mapNameToInstance (r.component)
             instance.enqueueInput (msg)
 
+    def panic (self, message):
+        print ("\n*****")
+        print (message, file=sys.stderr)
+        print ("*****\n")
+        sys.exit (1)
+        
     def findConnectionBasedOnMessage (self, m):
         for conn in self.connections:
             if (conn.containsSenderP (m.sender ())):
                 return conn
-        print (m.getTag (), file=sys.stderr)
-        assert False, "MPOS: internal error"
+        self.panic (f"MPOS: internal error in findConnectionBasedOnMessage tag={m.getTag ()}")
 
     def mapNameToInstance (self, localName):
         if (localName == ''):

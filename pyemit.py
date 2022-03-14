@@ -34,7 +34,8 @@ def unescapeCode (s):
   # proper parse (e.g. using pfr and .ohm/.glue files))
   code1a = re.sub (r'<pre([^>]*>)', '', code)
   code1 = code1a.replace ("</pre>","")
-  code2 = re.sub (r'<div>([^<]*)</div>', r'\1\n', code1)
+  code2 = re.sub (r'<div>([^<]*)</div>', r'\1\n', code1, re.MULTILINE)
+  assert (None == re.search (r'<div>', code2)), "<div> not removed (internal error)"
   code3 = re.sub (r'<p ([^>]*)>', r'', code2)
   code4 = re.sub (r'</p>', "", code3)
   code5 = re.sub (r'<span ([^<]*)>', "", code4)
