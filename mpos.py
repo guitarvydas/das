@@ -1,3 +1,4 @@
+import sys
 import dispatcher
 import queue
 
@@ -168,7 +169,8 @@ class Container (Component):
         for conn in self.connections:
             if (conn.containsSenderP (m.sender ())):
                 return conn
-        assert False, "internal error"
+        print (m.getTag (), file=sys.stderr)
+        assert False, "MPOS: internal error"
 
     def mapNameToInstance (self, localName):
         if (localName == ''):

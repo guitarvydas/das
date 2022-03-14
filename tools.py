@@ -8,11 +8,11 @@ class _tools (mpos.Leaf):
 
     def __init__ (self, dispatcher, parent, idInParent):
         super ().__init__ (dispatcher, parent, idInParent)
-        self.inputs=['']
+        self.inputs=['go']
         self.outputs=['baton', 'quit']
     def react (self, inputMessage):
         import subprocess
-        rc = subprocess.run (["make.bash", "tools"])
+        rc = subprocess.run (["./make.bash", "tools"])
         if rc != 0:
             send ("quit", "./make.bash tools")
         else:

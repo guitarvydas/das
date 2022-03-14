@@ -44,6 +44,7 @@ def unescapeCode (s):
 
   codefinal = html.unescape (code7)
   return codefinal
+    
 
 def printCommonHeader (component, outf):
 
@@ -107,11 +108,18 @@ def printCommonBodyTail (component, outf):
   
 
 def printLeafScript (component, outf):
-  printCommonHeader (component, outf)
-  printCommonImports (component, outf)
-  printCommonInit (component, outf, "Leaf")
-  printCommonBodyHead (component, outf)
-  printCommonBodyTail (component, outf)
+  if (component ["synccode"]):
+    printCommonHeader (component, outf)
+    printCommonImports (component, outf)
+    printCommonInit (component, outf, "Leaf")
+    printCommonBodyHead (component, outf)
+    printCommonBodyTail (component, outf)
+  else:
+    print ("", file=sys.stderr)
+    print ("*** Diagram Error - leaf contains no code", file=sys.stderr)
+    print (component ["name"], file=sys.stderr)
+    print ("", file=sys.stderr)
+    assert False, "Diagram Error"
 
 def formatMap (children):
   # print children surrounded by dq's (is there a better way to do this in Python?)
@@ -205,6 +213,7 @@ def printScript (component, outf):
 for componentArray in data:
   for component in componentArray:
     fname = component["name"] + ".py"
+    print (fname, file=sys.stderr)
     with open (fname, "w") as script:
       printScript (component, script)
 

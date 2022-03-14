@@ -8,13 +8,18 @@ class _clean (mpos.Leaf):
 
     def __init__ (self, dispatcher, parent, idInParent):
         super ().__init__ (dispatcher, parent, idInParent)
-        self.inputs=['']
+        self.inputs=['go']
         self.outputs=['baton', 'quit']
     def react (self, inputMessage):
         import subprocess
-        rc = subprocess.run (["make.bash", "clean"])
+        import sys
+        rc = subprocess.run (["make", "clean"])
+        sys.exit(1)
+        print (rc, file=sys.stderr)
         if rc != 0:
-             send ("quit", "make clean")
+             self.send ("quit", "make clean")
         else:
-            send ("baton", True)
+            self.send ("baton", True)
+        <div>
+        </div>
         return super ().react (inputMessage)
