@@ -12,9 +12,9 @@ class _clean (mpos.Leaf):
         self.outputs=['baton', 'quit']
     def react (self, inputMessage):
         import subprocess
-        make_process = subprocess.Popen("make clean", stderr=subprocess.STDOUT)
-        if make_process.wait() != 0:
-             send ("quit", "./make.bash clean")
+        rc = subprocess.run (["make.bash", "clean"])
+        if rc != 0:
+             send ("quit", "make clean")
         else:
             send ("baton", True)
         return super ().react (inputMessage)

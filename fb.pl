@@ -336,9 +336,9 @@ diagram_fact(target, cell_21, b8TCcNYkWDl19BBblSuP__36).
 diagram_fact(target, cell_24, b8TCcNYkWDl19BBblSuP__34).
 diagram_fact(target, cell_26, b8TCcNYkWDl19BBblSuP__36).
 diagram_fact(target, cell_28, b8TCcNYkWDl19BBblSuP__5).
-diagram_fact(value, cell_10, "&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;import subprocess&lt;br&gt;make_process = subprocess.Popen(&quot;make clean&quot;, stderr=subprocess.STDOUT)&lt;br&gt;if make_process.wait() != 0:&lt;br&gt;     send (&quot;quit&quot;, &quot;./make.bash clean&quot;)&lt;br&gt;else:&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
-diagram_fact(value, cell_11, "&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;import subprocess&lt;br&gt;make_process = subprocess.Popen(&quot;make tools&quot;, stderr=subprocess.STDOUT)&lt;br&gt;if make_process.wait() != 0:&lt;br&gt;    send (&quot;quit&quot;, &quot;./make.bash tools&quot;)&lt;br&gt;else:&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
-diagram_fact(value, cell_12, "&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;import subprocess&lt;br&gt;make_process = subprocess.Popen(&quot;make helloworld.py&quot;, stderr=subprocess.STDOUT)&lt;br&gt;if make_process.wait() != 0:&lt;br&gt;    send (&quot;quit&quot;, &quot;./make.bash helloworld.py&quot;)&lt;br&gt;else:&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/span&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
+diagram_fact(value, cell_10, "&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;import subprocess&lt;br&gt;rc = subprocess.run ([&quot;make.bash&quot;, &quot;clean&quot;])&lt;br&gt;if rc != 0:&lt;br&gt;     send (&quot;quit&quot;, &quot;make clean&quot;)&lt;br&gt;else:&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
+diagram_fact(value, cell_11, "&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;import subprocess&lt;br&gt;rc = subprocess.run ([&quot;make.bash&quot;, &quot;tools&quot;])&lt;br&gt;if rc != 0:&lt;br&gt;    send (&quot;quit&quot;, &quot;./make.bash tools&quot;)&lt;br&gt;else:&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
+diagram_fact(value, cell_12, "&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;import subprocess&lt;br&gt;rc = subprocess.rc ([&quot;make.bash&quot;, &quot;helloworld.py&quot;])&lt;br&gt;if rc != 0:&lt;br&gt;    send (&quot;quit&quot;, &quot;./make.bash helloworld.py&quot;)&lt;br&gt;else:&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/span&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
 diagram_fact(value, cell_13, "").
 diagram_fact(value, cell_15, "baton").
 diagram_fact(value, cell_17, "quit").
@@ -353,7 +353,7 @@ diagram_fact(value, cell_30, "baton").
 diagram_fact(value, cell_31, "quit").
 diagram_fact(value, cell_6, "d2py").
 diagram_fact(value, cell_7, "tools").
-diagram_fact(value, cell_8, "d2py").
+diagram_fact(value, cell_8, "build").
 diagram_fact(value, cell_9, "clean").
 diagram_fact(vertex, cell_10, 1).
 diagram_fact(vertex, cell_11, 1).
@@ -482,9 +482,9 @@ das_fact(kind,cell_6,rectangle).
 das_fact(kind,cell_7,rectangle).
 das_fact(kind,cell_8,rectangle).
 das_fact(kind,cell_9,rectangle).
-das_fact(name, cell_10, "&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;import subprocess&lt;br&gt;make_process = subprocess.Popen(&quot;make clean&quot;, stderr=subprocess.STDOUT)&lt;br&gt;if make_process.wait() != 0:&lt;br&gt;     send (&quot;quit&quot;, &quot;./make.bash clean&quot;)&lt;br&gt;else:&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
-das_fact(name, cell_11, "&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;import subprocess&lt;br&gt;make_process = subprocess.Popen(&quot;make tools&quot;, stderr=subprocess.STDOUT)&lt;br&gt;if make_process.wait() != 0:&lt;br&gt;    send (&quot;quit&quot;, &quot;./make.bash tools&quot;)&lt;br&gt;else:&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
-das_fact(name, cell_12, "&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;import subprocess&lt;br&gt;make_process = subprocess.Popen(&quot;make helloworld.py&quot;, stderr=subprocess.STDOUT)&lt;br&gt;if make_process.wait() != 0:&lt;br&gt;    send (&quot;quit&quot;, &quot;./make.bash helloworld.py&quot;)&lt;br&gt;else:&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/span&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
+das_fact(name, cell_10, "&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;import subprocess&lt;br&gt;rc = subprocess.run ([&quot;make.bash&quot;, &quot;clean&quot;])&lt;br&gt;if rc != 0:&lt;br&gt;     send (&quot;quit&quot;, &quot;make clean&quot;)&lt;br&gt;else:&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
+das_fact(name, cell_11, "&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;import subprocess&lt;br&gt;rc = subprocess.run ([&quot;make.bash&quot;, &quot;tools&quot;])&lt;br&gt;if rc != 0:&lt;br&gt;    send (&quot;quit&quot;, &quot;./make.bash tools&quot;)&lt;br&gt;else:&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
+das_fact(name, cell_12, "&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;import subprocess&lt;br&gt;rc = subprocess.rc ([&quot;make.bash&quot;, &quot;helloworld.py&quot;])&lt;br&gt;if rc != 0:&lt;br&gt;    send (&quot;quit&quot;, &quot;./make.bash helloworld.py&quot;)&lt;br&gt;else:&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/span&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
 das_fact(name, cell_13, "").
 das_fact(name, cell_15, "baton").
 das_fact(name, cell_17, "quit").
@@ -499,7 +499,7 @@ das_fact(name, cell_30, "baton").
 das_fact(name, cell_31, "quit").
 das_fact(name, cell_6, "d2py").
 das_fact(name, cell_7, "tools").
-das_fact(name, cell_8, "d2py").
+das_fact(name, cell_8, "build").
 das_fact(name, cell_9, "clean").
 das_fact(color,cell_10,"red").
 das_fact(color,cell_11,"red").
@@ -688,9 +688,9 @@ das_fact(direct_contains,cell_6,cell_16).
 das_fact(direct_contains,cell_6,cell_21).
 das_fact(direct_contains,cell_6,cell_24).
 das_fact(direct_contains,cell_6,cell_26).
-das_fact(codebox,cell_10,"&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;import subprocess&lt;br&gt;make_process = subprocess.Popen(&quot;make clean&quot;, stderr=subprocess.STDOUT)&lt;br&gt;if make_process.wait() != 0:&lt;br&gt;     send (&quot;quit&quot;, &quot;./make.bash clean&quot;)&lt;br&gt;else:&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
-das_fact(codebox,cell_11,"&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;import subprocess&lt;br&gt;make_process = subprocess.Popen(&quot;make tools&quot;, stderr=subprocess.STDOUT)&lt;br&gt;if make_process.wait() != 0:&lt;br&gt;    send (&quot;quit&quot;, &quot;./make.bash tools&quot;)&lt;br&gt;else:&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
-das_fact(codebox,cell_12,"&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;import subprocess&lt;br&gt;make_process = subprocess.Popen(&quot;make helloworld.py&quot;, stderr=subprocess.STDOUT)&lt;br&gt;if make_process.wait() != 0:&lt;br&gt;    send (&quot;quit&quot;, &quot;./make.bash helloworld.py&quot;)&lt;br&gt;else:&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/span&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
+das_fact(codebox,cell_10,"&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;import subprocess&lt;br&gt;rc = subprocess.run ([&quot;make.bash&quot;, &quot;clean&quot;])&lt;br&gt;if rc != 0:&lt;br&gt;     send (&quot;quit&quot;, &quot;make clean&quot;)&lt;br&gt;else:&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
+das_fact(codebox,cell_11,"&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;import subprocess&lt;br&gt;rc = subprocess.run ([&quot;make.bash&quot;, &quot;tools&quot;])&lt;br&gt;if rc != 0:&lt;br&gt;    send (&quot;quit&quot;, &quot;./make.bash tools&quot;)&lt;br&gt;else:&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
+das_fact(codebox,cell_12,"&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;import subprocess&lt;br&gt;rc = subprocess.rc ([&quot;make.bash&quot;, &quot;helloworld.py&quot;])&lt;br&gt;if rc != 0:&lt;br&gt;    send (&quot;quit&quot;, &quot;./make.bash helloworld.py&quot;)&lt;br&gt;else:&lt;br&gt;    send (&quot;baton&quot;, True)&lt;/span&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;").
 das_fact(connection, cell_6, cell_14).
 das_fact(sender, cell_14, sender{component:"clean",port:"baton"}).
 das_fact(receiver, cell_14, receiver{component:"tools",port:""}).
@@ -702,7 +702,7 @@ das_fact(sender, cell_16, sender{component:"clean",port:"quit"}).
 das_fact(receiver, cell_16, receiver{component:"d2py",port:"quit"}).
 das_fact(connection, cell_6, cell_19).
 das_fact(sender, cell_19, sender{component:"tools",port:"baton"}).
-das_fact(receiver, cell_19, receiver{component:"d2py",port:""}).
+das_fact(receiver, cell_19, receiver{component:"build",port:""}).
 das_fact(connection, cell_6, cell_21).
 das_fact(sender, cell_21, sender{component:"tools",port:"quit"}).
 das_fact(receiver, cell_21, receiver{component:"d2py",port:"quit"}).
@@ -710,16 +710,16 @@ das_fact(connection, cell_6, cell_21).
 das_fact(sender, cell_21, sender{component:"tools",port:"quit"}).
 das_fact(receiver, cell_21, receiver{component:"d2py",port:"quit"}).
 das_fact(connection, cell_6, cell_24).
-das_fact(sender, cell_24, sender{component:"d2py",port:"baton"}).
+das_fact(sender, cell_24, sender{component:"build",port:"baton"}).
 das_fact(receiver, cell_24, receiver{component:"d2py",port:"baton"}).
 das_fact(connection, cell_6, cell_24).
-das_fact(sender, cell_24, sender{component:"d2py",port:"baton"}).
+das_fact(sender, cell_24, sender{component:"build",port:"baton"}).
 das_fact(receiver, cell_24, receiver{component:"d2py",port:"baton"}).
 das_fact(connection, cell_6, cell_26).
-das_fact(sender, cell_26, sender{component:"d2py",port:"quit"}).
+das_fact(sender, cell_26, sender{component:"build",port:"quit"}).
 das_fact(receiver, cell_26, receiver{component:"d2py",port:"quit"}).
 das_fact(connection, cell_6, cell_26).
-das_fact(sender, cell_26, sender{component:"d2py",port:"quit"}).
+das_fact(sender, cell_26, sender{component:"build",port:"quit"}).
 das_fact(receiver, cell_26, receiver{component:"d2py",port:"quit"}).
 das_fact(connection, cell_6, cell_28).
 das_fact(sender, cell_28, sender{component:"d2py",port:""}).
