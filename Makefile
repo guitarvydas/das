@@ -33,6 +33,14 @@ helloworld.py : helloworld.json
 	chmod a+x top.py
 	./top.py
 
+d2py.json : tools d2py.drawio
+	./generate.bash $(TOOLS) d2py.drawio
+
+d2py.py : 2py.json
+	./transpile2py.bash d2py.drawio out.json
+	chmod a+x top.py
+	./top.py
+
 clean:
 	(cd ./dr ; make clean)
 	(cd ./prep ; make clean)

@@ -61,4 +61,5 @@ ${support.popContext ()}
   number_qouted [q1 n q2] = [[${n}]]
   number_raw [n] = [[${n}]]
   quote [c] = [[${c}]]
-  numeric [@whole kdot @fractional] = [[${whole}${kdot}${fractional}]]
+  numeric [@whole @fractional] = [[${whole}${fractional}]]
+  fractional [kdot @digits] = [[${kdot}${digits}]]

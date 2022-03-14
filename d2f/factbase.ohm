@@ -23,5 +23,6 @@ diagram {
   number =   quote numeric quote -- qouted
            |       numeric       -- raw 
   quote = "\""
-  numeric = digit+ ("." digit+)?
+  numeric = digit+ fractional?
+  fractional = "." digit+
 }
