@@ -39,7 +39,8 @@ def unescapeCode (s):
   code4 = re.sub (r'</p>', "", code3)
   code5 = re.sub (r'<span ([^<]*)>', "", code4)
   code6 = re.sub (r'</span>', "\n", code5)
-  code7 = re.sub (r'<br>', "\n", code6)
+  code7a = re.sub (r'<br/>', "\n", code6)
+  code7 = re.sub (r'<br>', "\n", code7a)
 
   codefinal = html.unescape (code7)
   return codefinal

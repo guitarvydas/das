@@ -11,10 +11,10 @@ class _tools (mpos.Leaf):
         self.inputs=['']
         self.outputs=['baton', 'quit']
     def react (self, inputMessage):
+        import subprocess
         make_process = subprocess.Popen("make tools", stderr=subprocess.STDOUT)
         if make_process.wait() != 0:
-            send ("quit", "make tools")
+            send ("quit", "./make.bash tools")
         else:
             send ("baton", True)
-        
         return super ().react (inputMessage)

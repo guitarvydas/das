@@ -38,8 +38,7 @@ d2py.json : tools d2py.drawio
 	mv out.json d2py.json
 
 d2py.py : d2py.json transpile2py.bash pyemit.py
-	mv d2py.json out.json
-	./transpile2py.bash d2py.drawio out.json
+	./transpile2py.bash d2py.drawio d2py.json
 	chmod a+x top.py
 	./top.py
 
@@ -52,7 +51,7 @@ clean:
 	rm -f layer*
 	rm -f preprocessed*
 	rm -f duct?_*
-	rm -f out.json
+	rm -f *.json
 	rm -rf _*
 	rm -f *~
 
