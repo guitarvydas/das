@@ -1,0 +1,82 @@
+[
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_25",
+      "inputs": ["quit" ],
+      "name":"abort",
+      "outputs": [],
+      "synccode":"&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;self.quit (inputMessage.data)&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": ["abort", "tools", "build", "clean" ],
+      "connections": [
+	{
+	  "receivers": [ {"receiver": {"component":"tools", "port":"go"}} ],
+	  "senders": [ {"sender": {"component":"clean", "port":"baton"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"abort", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"clean", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"build", "port":"go"}} ],
+	  "senders": [ {"sender": {"component":"tools", "port":"baton"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"abort", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"tools", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"abort", "port":"quit"}} ],
+	  "senders": [ {"sender": {"component":"build", "port":"quit"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"clean", "port":"go"}} ],
+	  "senders": [ {"sender": {"component":"d2py", "port":"go"}} ]
+	}
+      ],
+      "id":"cell_6",
+      "inputs": ["go" ],
+      "name":"d2py",
+      "outputs": [],
+      "synccode":""
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_7",
+      "inputs": ["go" ],
+      "name":"tools",
+      "outputs": ["baton", "quit" ],
+      "synccode":"&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;import subprocess&lt;br&gt;r = subprocess.run ([&quot;make&quot;, &quot;tools&quot;])&lt;br&gt;if (r.returncode != 0):&lt;br&gt;    self.send (&quot;quit&quot;, f&quot;error {r} in make tools&quot;)&lt;br&gt;else:&lt;br&gt;    self.send (&quot;baton&quot;, True)&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_8",
+      "inputs": ["go" ],
+      "name":"build",
+      "outputs": ["quit" ],
+      "synccode":"&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;import subprocess&lt;br&gt;r = subprocess.run ([&quot;make&quot;, &quot;helloworld.py&quot;])&lt;br&gt;if (r.returncode != 0):&lt;br&gt;    self.send (&quot;quit&quot;, f&quot;error {r} in make helloworld.py&quot;)&lt;br&gt;&lt;/span&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_9",
+      "inputs": ["go" ],
+      "name":"clean",
+      "outputs": ["baton", "quit" ],
+      "synccode":"&lt;pre class=&quot;lang-py s-code-block&quot; style=&quot;margin-top: 0px ; margin-bottom: 0px ; padding: 12px ; border: 0px ; font-stretch: inherit ; line-height: 1.30769 ; vertical-align: baseline ; box-sizing: inherit ; width: auto ; max-height: 600px ; overflow: auto ; border-radius: 5px ; overflow-wrap: normal&quot;&gt;import subprocess&lt;br&gt;r = subprocess.run ([&quot;make&quot;, &quot;clean&quot;])&lt;br&gt;if (r.returncode != 0):&lt;br&gt;     self.send (&quot;quit&quot;, f&quot;error {r} in make clean&quot;)&lt;br&gt;else:&lt;br&gt;    self.send (&quot;baton&quot;, True)&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ]
+]
