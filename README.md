@@ -1,8 +1,30 @@
 ## Synopsis
 
-Build/run helloworld as a drawing.
+use: make
 
-Build a build script from a drawing.
+Transpile 2 drawings to Python code:
+1. helloworld.drawio -> helloworld.py
+2. d2py.drawio -> d2py.py
+
+When (1) is run, it results in "hello world".
+
+When topd2py.py runs, it re-builds (1) and then runs it, resulting in "hello world"
+
+## See also
+
+I have refined these ideas further in
+
+https://github.com/guitarvydas/hamburger
+https://github.com/guitarvydas/hamburgerworkbench0d
+https://github.com/guitarvydas/hamburgerworkbenchD0D
+
+## Visual Script Language
+
+Drawing (2) is a script that can be used to build helloworld.drawio -> helloworld.py.
+
+Drawing (2) creates a script for helloworld.drawio -> topd2py.py.
+
+So, if you run `python topd2py.py`, it will transpile `helloworld.drawio -> helloworld.py` and then run the result, printing `hello world`.
 
 
 ## More Detail
