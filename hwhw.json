@@ -5,7 +5,7 @@
       "connections": [],
       "id":"cell_12",
       "inputs": ["inw" ],
-      "name":"world",
+      "name":"world2",
       "outputs": ["outw" ],
       "synccode":"&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
     }
@@ -15,40 +15,40 @@
       "children": [],
       "connections": [],
       "id":"cell_21",
-      "inputs": ["inw2" ],
-      "name":"world",
-      "outputs": ["outw2" ],
+      "inputs": ["inw3" ],
+      "name":"world3",
+      "outputs": ["outw3" ],
       "synccode":"&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
     }
   ],
   [
     {
-      "children": ["world", "world", "hello" ],
+      "children": ["world2", "world3", "hello" ],
       "connections": [
 	{
-	  "receivers": [ {"receiver": {"component":"world", "port":"inw2"}} ],
+	  "receivers": [ {"receiver": {"component":"world3", "port":"inw3"}} ],
 	  "senders": [ {"sender": {"component":"hello", "port":"outh"}} ]
 	},
 	{
 	  "receivers": [ {"receiver": {"component":"hello", "port":"inh"}} ],
-	  "senders": [ {"sender": {"component":"hw", "port":"go"}} ]
+	  "senders": [ {"sender": {"component":"hwhw", "port":"go"}} ]
 	},
 	{
-	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
-	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
+	  "receivers": [ {"receiver": {"component":"hwhw", "port":"outHW"}} ],
+	  "senders": [ {"sender": {"component":"world2", "port":"outw"}} ]
 	},
 	{
-	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
-	  "senders": [ {"sender": {"component":"world", "port":"outw2"}} ]
+	  "receivers": [ {"receiver": {"component":"hwhw", "port":"outHW"}} ],
+	  "senders": [ {"sender": {"component":"world3", "port":"outw3"}} ]
 	},
 	{
-	  "receivers": [ {"receiver": {"component":"world", "port":"inw"}} ],
+	  "receivers": [ {"receiver": {"component":"world2", "port":"inw"}} ],
 	  "senders": [ {"sender": {"component":"hello", "port":"outh"}} ]
 	}
       ],
       "id":"cell_6",
       "inputs": ["go" ],
-      "name":"hw",
+      "name":"hwhw",
       "outputs": ["outHW" ],
       "synccode":""
     }
