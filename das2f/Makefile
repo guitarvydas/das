@@ -46,10 +46,8 @@ $(QUERIES) : $(QUERYSOURCES)
 
 clean:
 	cp layer6 temp-layer6
-	cp layer6_query.bash temp-layer6_query.bash
 	rm -f layer*.bash
 	cp temp-layer6 layer6
-	cp temp-layer6_query.bash layer6_query.bash
 	rm -f preprocessed*
 	rm -f a-dr-edgecontainment
 	rm -f b-dr-edgecontainment

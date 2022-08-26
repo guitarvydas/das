@@ -31,8 +31,8 @@ echo '-- layer5_query.bash generated --' 1>&2
 # chmod a+x layer6_query.bash
 # echo '-- layer6_query.bash generated --' 1>&2
 
-echo '-- layer6_query.bash not touched --' 1>&2
-
+echo '-- layer6_query.bash not touched (copied) --' 1>&2
+cp manual_layer6_query.bash layer6_query.bash
 
 $prep '#+ query ' '#+ ' implicitforall.ohm implicitforall.glue  --support=$here/implicitforall.support.js <contains_edge1.md >preprocessed_contains_edge1.md
 $qd3 $root $here/qd3    preprocessed_contains_edge1 --prefix="$here/" >layeredgecontainment1_query.bash
