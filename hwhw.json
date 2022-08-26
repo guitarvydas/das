@@ -3,7 +3,7 @@
     {
       "children": [],
       "connections": [],
-      "id":"cell_11",
+      "id":"cell_12",
       "inputs": ["inw" ],
       "name":"world",
       "outputs": ["outw" ],
@@ -12,8 +12,23 @@
   ],
   [
     {
-      "children": ["world", "hello" ],
+      "children": [],
+      "connections": [],
+      "id":"cell_21",
+      "inputs": ["inw2" ],
+      "name":"world",
+      "outputs": ["outw2" ],
+      "synccode":"&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": ["world", "world", "hello" ],
       "connections": [
+	{
+	  "receivers": [ {"receiver": {"component":"world", "port":"inw2"}} ],
+	  "senders": [ {"sender": {"component":"hello", "port":"outh"}} ]
+	},
 	{
 	  "receivers": [ {"receiver": {"component":"hello", "port":"inh"}} ],
 	  "senders": [ {"sender": {"component":"hw", "port":"go"}} ]
@@ -21,6 +36,10 @@
 	{
 	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
 	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
+	  "senders": [ {"sender": {"component":"world", "port":"outw2"}} ]
 	},
 	{
 	  "receivers": [ {"receiver": {"component":"world", "port":"inw"}} ],

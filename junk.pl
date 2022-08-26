@@ -17,7 +17,12 @@ q3(All,Indirect,Set):-
 subtract(All,Indirect,Set).
 
 query:-
-    q1(All),
-    q2(Indirect),
-    q3(All, Indirect, Set),
-    json_write(user_output,Set,[width(128)]).
+    (
+	q1(All),
+	q2(Indirect),
+	q3(All,Indirect,Set),
+	json_write(user_output,Set,[width(128)])
+    ;
+	json_write(user_output,[],[width(128)])
+        
+    ).
