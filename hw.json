@@ -1,0 +1,76 @@
+[
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_11",
+      "inputs": ["inw" ],
+      "name":"world",
+      "outputs": ["outw" ],
+      "synccode":"print (&quot;world&quot;)&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": ["world", "hello" ],
+      "connections": [
+	{
+	  "receivers": [ {"receiver": {"component":"hello", "port":"inh"}} ],
+	  "senders": [ {"sender": {"component":"hw", "port":"go"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
+	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
+	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
+	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
+	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
+	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
+	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
+	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
+	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"world", "port":"inw"}} ],
+	  "senders": [ {"sender": {"component":"hello", "port":"outh"}} ]
+	}
+      ],
+      "id":"cell_6",
+      "inputs": ["go" ],
+      "name":"hw",
+      "outputs": ["outHW" ],
+      "synccode":""
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_7",
+      "inputs": ["inh" ],
+      "name":"hello",
+      "outputs": ["outh" ],
+      "synccode":"print (&quot;hello&quot;)&lt;br&gt;self.send (&quot;out&quot;, True)&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ]
+]
