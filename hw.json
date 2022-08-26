@@ -23,34 +23,6 @@
 	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
 	},
 	{
-	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
-	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
-	},
-	{
-	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
-	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
-	},
-	{
-	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
-	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
-	},
-	{
-	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
-	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
-	},
-	{
-	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
-	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
-	},
-	{
-	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
-	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
-	},
-	{
-	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
-	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
-	},
-	{
 	  "receivers": [ {"receiver": {"component":"world", "port":"inw"}} ],
 	  "senders": [ {"sender": {"component":"hello", "port":"outh"}} ]
 	}

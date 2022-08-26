@@ -335,10 +335,10 @@ das_fact(direction,cell_15,input).
 das_fact(direction,cell_16,input).
 das_fact(direction,cell_18,output).
 das_fact(direction,cell_19,output).
+das_fact(contains,cell_11,cell_13).
 das_fact(contains,cell_6,cell_10).
 das_fact(contains,cell_6,cell_11).
 das_fact(contains,cell_6,cell_12).
-das_fact(contains,cell_11,cell_13).
 das_fact(contains,cell_6,cell_13).
 das_fact(contains,cell_6,cell_16).
 das_fact(contains,cell_6,cell_18).
@@ -351,12 +351,12 @@ das_fact(contains,cell_6,cell_15).
 das_fact(contains,cell_6,cell_19).
 das_fact(contains,cell_7,cell_10).
 das_fact(contains,cell_7,cell_16).
-das_fact(indirect_contains,cell_6,cell_13).
+das_fact(indirect_contains,cell_6,cell_10).
 das_fact(indirect_contains,cell_6,cell_12).
+das_fact(indirect_contains,cell_6,cell_13).
+das_fact(indirect_contains,cell_6,cell_16).
 das_fact(indirect_contains,cell_6,cell_18).
 das_fact(indirect_contains,cell_6,cell_8).
-das_fact(indirect_contains,cell_6,cell_10).
-das_fact(indirect_contains,cell_6,cell_16).
 das_fact(direct_contains,cell_11,cell_12).
 das_fact(direct_contains,cell_11,cell_13).
 das_fact(direct_contains,cell_11,cell_18).
@@ -376,9 +376,6 @@ das_fact(codebox,cell_8,"print (&quot;hello&quot;)&lt;br&gt;self.send (&quot;out
 das_fact(connection, cell_6, cell_14).
 das_fact(sender, cell_14, sender{component:"hw",port:"go"}).
 das_fact(receiver, cell_14, receiver{component:"hello",port:"inh"}).
-das_fact(connection, cell_6, cell_17).
-das_fact(sender, cell_17, sender{component:"world",port:"outw"}).
-das_fact(receiver, cell_17, receiver{component:"hw",port:"outHW"}).
 das_fact(connection, cell_6, cell_17).
 das_fact(sender, cell_17, sender{component:"world",port:"outw"}).
 das_fact(receiver, cell_17, receiver{component:"hw",port:"outHW"}).
