@@ -36,10 +36,6 @@ helloworld.py : helloworld.json
 
 
 
-hello.json : tools hello.drawio
-	./generate.bash $(TOOLS) hello.drawio
-	mv out.json hello.json
-
 hw.json : tools hw.drawio
 	./generate.bash $(TOOLS) hw.drawio
 	mv out.json hw.json
