@@ -11,8 +11,8 @@ query_helper(${support.formatParameters ()}):-
 ${Query.trim ()}
 true.
 query:-
-(bagof([${support.formatParameters ()}],query_helper(${support.formatParameters ()}),Bag),
-json_write(user_output,Bag,[width(128)])
+(setof([${support.formatParameters ()}],query_helper(${support.formatParameters ()}),Set),
+json_write(user_output,Set,[width(128)])
 )
 ;
 json_write(user_output,[],[width(123)]).

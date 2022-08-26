@@ -1,0 +1,67 @@
+[
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_12",
+      "inputs": ["inw" ],
+      "name":"world2",
+      "outputs": ["outw" ],
+      "synccode":"&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_21",
+      "inputs": ["inw3" ],
+      "name":"world3",
+      "outputs": ["outw3" ],
+      "synccode":"&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": ["world2", "world3", "hello" ],
+      "connections": [
+	{
+	  "receivers": [ {"receiver": {"component":"world3", "port":"inw3"}} ],
+	  "senders": [ {"sender": {"component":"hello", "port":"outh"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"hello", "port":"inh"}} ],
+	  "senders": [ {"sender": {"component":"hwhw", "port":"go"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"hwhw", "port":"outHW"}} ],
+	  "senders": [ {"sender": {"component":"world2", "port":"outw"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"hwhw", "port":"outHW"}} ],
+	  "senders": [ {"sender": {"component":"world3", "port":"outw3"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"world2", "port":"inw"}} ],
+	  "senders": [ {"sender": {"component":"hello", "port":"outh"}} ]
+	}
+      ],
+      "id":"cell_6",
+      "inputs": ["go" ],
+      "name":"hwhw",
+      "outputs": ["outHW" ],
+      "synccode":""
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_7",
+      "inputs": ["inh" ],
+      "name":"hello",
+      "outputs": ["outh" ],
+      "synccode":"&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ]
+]
