@@ -5,6 +5,7 @@
       "connections": [],
       "id":"cell_11",
       "inputs": ["inw" ],
+      "kind":"world",
       "name":"world",
       "outputs": ["outw" ],
       "synccode":"&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
@@ -29,6 +30,7 @@
       ],
       "id":"cell_6",
       "inputs": ["go" ],
+      "kind":"hw",
       "name":"hw",
       "outputs": ["outHW" ],
       "synccode":""
@@ -40,6 +42,7 @@
       "connections": [],
       "id":"cell_7",
       "inputs": ["inh" ],
+      "kind":"hello",
       "name":"hello",
       "outputs": ["outh" ],
       "synccode":"&lt;br&gt;&lt;div&gt;&lt;/div&gt;"

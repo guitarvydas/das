@@ -1,0 +1,22 @@
+das_fact(name, cell_10, "outh").
+    das_fact(kindtype, cell_10, "outh").
+das_fact(name, cell_11, "world").
+    das_fact(kindtype, cell_11, "world").
+das_fact(name, cell_12, "inw").
+    das_fact(kindtype, cell_12, "inw").
+das_fact(name, cell_13, "&lt;br&gt;&lt;div&gt;&lt;/div&gt;").
+    das_fact(kindtype, cell_13, "&lt;br&gt;&lt;div&gt;&lt;/div&gt;").
+das_fact(name, cell_15, "go").
+    das_fact(kindtype, cell_15, "go").
+das_fact(name, cell_16, "inh").
+    das_fact(kindtype, cell_16, "inh").
+das_fact(name, cell_18, "outw").
+    das_fact(kindtype, cell_18, "outw").
+das_fact(name, cell_19, "outHW").
+    das_fact(kindtype, cell_19, "outHW").
+das_fact(name, cell_6, "hw").
+    das_fact(kindtype, cell_6, "hw").
+das_fact(name, cell_7, "hello").
+    das_fact(kindtype, cell_7, "hello").
+das_fact(name, cell_8, "&lt;br&gt;&lt;div&gt;&lt;/div&gt;").
+    das_fact(kindtype, cell_8, "&lt;br&gt;&lt;div&gt;&lt;/div&gt;").
