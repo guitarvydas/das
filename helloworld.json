@@ -4,7 +4,7 @@
       "children": [],
       "connections": [],
       "id":"cell_11",
-      "inputs": ["in" ],
+      "inputs": ["cell_12" ],
       "kind":"world",
       "name":"world",
       "outputs": [],
@@ -13,19 +13,19 @@
   ],
   [
     {
-      "children": ["hello", "world" ],
+      "children": [ {"kind":"world", "name":"cell_11"},  {"kind":"hello", "name":"cell_7"} ],
       "connections": [
 	{
-	  "receivers": [ {"receiver": {"component":"hello", "port":"a"}} ],
-	  "senders": [ {"sender": {"component":"helloworld", "port":"go"}} ]
+	  "receivers": [ {"receiver": {"component":"cell_7", "port":"a"}} ],
+	  "senders": [ {"sender": {"component":"cell_6", "port":"go"}} ]
 	},
 	{
-	  "receivers": [ {"receiver": {"component":"world", "port":"in"}} ],
-	  "senders": [ {"sender": {"component":"hello", "port":"out"}} ]
+	  "receivers": [ {"receiver": {"component":"cell_11", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"cell_7", "port":"out"}} ]
 	}
       ],
       "id":"cell_6",
-      "inputs": ["go" ],
+      "inputs": ["cell_15" ],
       "kind":"helloworld",
       "name":"helloworld",
       "outputs": [],
@@ -37,10 +37,10 @@
       "children": [],
       "connections": [],
       "id":"cell_7",
-      "inputs": ["a" ],
+      "inputs": ["cell_16" ],
       "kind":"hello",
       "name":"hello",
-      "outputs": ["out" ],
+      "outputs": ["cell_10" ],
       "synccode":"print (&quot;hello&quot;)&lt;br&gt;self.send (&quot;out&quot;, True)&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
     }
   ]

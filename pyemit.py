@@ -49,7 +49,7 @@ def unescapeCode (s):
 
 def printCommonHeader (component, outf):
 
-  name = component["name"]
+  #name = component["name"]
   idkey = component ["id"]
   inputs = component ["inputs"]
   outputs = component ["outputs"]
@@ -61,7 +61,7 @@ def printCommonHeader (component, outf):
 
 def printCommonImports (component, outf):
 
-  name = component["name"]
+  #name = component["name"]
   idkey = component ["id"]
   inputs = component ["inputs"]
   outputs = component ["outputs"]
@@ -72,14 +72,15 @@ def printCommonImports (component, outf):
 
 def printCommonInit (component, outf, cls):
 
-  name = component["name"]
+  #name = component["name"]
+  kind = component["kind"]
   idkey = component ["id"]
   inputs = component ["inputs"]
   outputs = component ["outputs"]
   code = unescapeCode (component["synccode"])
 
   print (file=outf)
-  print (f'class _{name} (mpos.{cls}):', file=outf)
+  print (f'class _{kind} (mpos.{cls}):', file=outf)
   print (file=outf)
   print (f'    def __init__ (self, dispatcher, parent, idInParent):', file=outf)
   print (f'        super ().__init__ (dispatcher, parent, idInParent)', file=outf)
@@ -87,8 +88,8 @@ def printCommonInit (component, outf, cls):
   print (f'        self.outputs={outputs}', file=outf)
 
 def printCommonBodyHead (component, outf):
-
-  name = component["name"]
+  
+  #name = component["name"]
   idkey = component ["id"]
   inputs = component ["inputs"]
   outputs = component ["outputs"]
@@ -99,7 +100,7 @@ def printCommonBodyHead (component, outf):
 
 def printCommonBodyTail (component, outf):
 
-  name = component["name"]
+  #name = component["name"]
   idkey = component ["id"]
   inputs = component ["inputs"]
   outputs = component ["outputs"]
@@ -118,7 +119,7 @@ def printLeafScript (component, outf):
   else:
     print ("", file=sys.stderr)
     print ("*** Diagram Error - leaf contains no code", file=sys.stderr)
-    print (component ["name"], file=sys.stderr)
+    print (component ["kind"], file=sys.stderr)
     print ("", file=sys.stderr)
     assert False, "Diagram Error"
 
@@ -126,7 +127,8 @@ def formatMap (children):
   # print children surrounded by dq's (is there a better way to do this in Python?)
   mchildren = []
   i = 0
-  for childname in children:
+  for childdescriptor in children:
+    childname = childdescriptor['name']
     mchildren.append ("'" + str (childname) + "'" + ":child" + str (i))
     i += 1
   return mchildren
@@ -159,7 +161,7 @@ def printContainerScript (component, outf):
 
   printCommonHeader (component, outf)
 
-  name = component ["name"]
+  #name = component ["name"]
   idkey = component ["id"]
   inputs = component ["inputs"]
   outputs = component ["outputs"]
@@ -170,7 +172,8 @@ def printContainerScript (component, outf):
 
   printCommonImports (component, outf)
   for child in component ["children"]:
-    print (f'import {child}', file=outf)
+    print (child)
+    print (f'import {child["kind"]}', file=outf)
 
   printCommonInit (component, outf, "Container")
 
@@ -182,8 +185,10 @@ def printContainerScript (component, outf):
   print (file=outf)
 
   j = 0
-  for childname in children:
-    print (f'        child{j} = {childname}._{childname} (dispatcher, self, \'{childname}\')', file=outf)
+  for childdescriptor in children:
+    childname = childdescriptor["name"]
+    childkind = childdescriptor["kind"]
+    print (f'        child{j} = {childkind}._{childkind} (dispatcher, self, \'{childname}\')', file=outf)
     j += 1
 
   i = 0
@@ -192,7 +197,8 @@ def printContainerScript (component, outf):
     receiverList = conn ["receivers"]
     senderList = conn ["senders"]
 
-    cstr = formatConnection (i, senderList, receiverList, component["name"])
+    #cstr = formatConnection (i, senderList, receiverList, component["name"])
+    cstr = formatConnection (i, senderList, receiverList, component["id"])
     print (f'        {cstr}', file=outf)
     
     connectornames.append (f'conn{i}')
@@ -213,7 +219,7 @@ def printScript (component, outf):
 
 for componentArray in data:
   for component in componentArray:
-    fname = component["name"] + ".py"
+    fname = component["kind"] + ".py"
     with open (fname, "w") as script:
       printScript (component, script)
 

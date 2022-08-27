@@ -4,10 +4,10 @@
       "children": [],
       "connections": [],
       "id":"cell_12",
-      "inputs": ["inw" ],
+      "inputs": ["cell_13" ],
       "kind":"world",
       "name":"world",
-      "outputs": ["outw" ],
+      "outputs": ["cell_19" ],
       "synccode":"&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
     }
   ],
@@ -16,35 +16,43 @@
       "children": [],
       "connections": [],
       "id":"cell_21",
-      "inputs": ["inw" ],
+      "inputs": ["cell_22" ],
       "kind":"world",
       "name":"world",
-      "outputs": ["outw" ],
+      "outputs": ["cell_25" ],
       "synccode":"&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
     }
   ],
   [
     {
-      "children": ["hello", "world" ],
+      "children": [ {"kind":"world", "name":"cell_12"},  {"kind":"world", "name":"cell_21"},  {"kind":"hello", "name":"cell_7"} ],
       "connections": [
 	{
-	  "receivers": [ {"receiver": {"component":"hello", "port":"inh"}} ],
-	  "senders": [ {"sender": {"component":"hwhw", "port":"go"}} ]
+	  "receivers": [ {"receiver": {"component":"cell_7", "port":"inh"}} ],
+	  "senders": [ {"sender": {"component":"cell_6", "port":"go"}} ]
 	},
 	{
-	  "receivers": [ {"receiver": {"component":"world", "port":"inw"}} ],
-	  "senders": [ {"sender": {"component":"hello", "port":"outh"}} ]
+	  "receivers": [ {"receiver": {"component":"cell_12", "port":"inw"}} ],
+	  "senders": [ {"sender": {"component":"cell_7", "port":"outh"}} ]
 	},
 	{
-	  "receivers": [ {"receiver": {"component":"hwhw", "port":"outHW"}} ],
-	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
+	  "receivers": [ {"receiver": {"component":"cell_21", "port":"inw"}} ],
+	  "senders": [ {"sender": {"component":"cell_7", "port":"outh"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"cell_6", "port":"outHW"}} ],
+	  "senders": [ {"sender": {"component":"cell_12", "port":"outw"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"cell_6", "port":"outHW"}} ],
+	  "senders": [ {"sender": {"component":"cell_21", "port":"outw"}} ]
 	}
       ],
       "id":"cell_6",
-      "inputs": ["go" ],
+      "inputs": ["cell_16" ],
       "kind":"hwhw",
       "name":"hwhw",
-      "outputs": ["outHW" ],
+      "outputs": ["cell_20" ],
       "synccode":""
     }
   ],
@@ -53,10 +61,10 @@
       "children": [],
       "connections": [],
       "id":"cell_7",
-      "inputs": ["inh" ],
+      "inputs": ["cell_17" ],
       "kind":"hello",
       "name":"hello",
-      "outputs": ["outh" ],
+      "outputs": ["cell_11" ],
       "synccode":"&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
     }
   ]

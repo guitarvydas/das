@@ -548,17 +548,17 @@ das_fact(codebox,cell_14,"&lt;br&gt;&lt;div&gt;&lt;/div&gt;").
 das_fact(codebox,cell_23,"&lt;br&gt;&lt;div&gt;&lt;/div&gt;").
 das_fact(codebox,cell_8,"&lt;br&gt;&lt;div&gt;&lt;/div&gt;").
 das_fact(connection, cell_6, cell_10).
-das_fact(sender, cell_10, sender{component:"hello",port:"outh"}).
-das_fact(receiver, cell_10, receiver{component:"world",port:"inw"}).
+das_fact(sender, cell_10, sender{component:"cell_7",port:"outh"}).
+das_fact(receiver, cell_10, receiver{component:"cell_21",port:"inw"}).
 das_fact(connection, cell_6, cell_15).
-das_fact(sender, cell_15, sender{component:"hwhw",port:"go"}).
-das_fact(receiver, cell_15, receiver{component:"hello",port:"inh"}).
+das_fact(sender, cell_15, sender{component:"cell_6",port:"go"}).
+das_fact(receiver, cell_15, receiver{component:"cell_7",port:"inh"}).
 das_fact(connection, cell_6, cell_18).
-das_fact(sender, cell_18, sender{component:"world",port:"outw"}).
-das_fact(receiver, cell_18, receiver{component:"hwhw",port:"outHW"}).
+das_fact(sender, cell_18, sender{component:"cell_12",port:"outw"}).
+das_fact(receiver, cell_18, receiver{component:"cell_6",port:"outHW"}).
 das_fact(connection, cell_6, cell_24).
-das_fact(sender, cell_24, sender{component:"world",port:"outw"}).
-das_fact(receiver, cell_24, receiver{component:"hwhw",port:"outHW"}).
+das_fact(sender, cell_24, sender{component:"cell_21",port:"outw"}).
+das_fact(receiver, cell_24, receiver{component:"cell_6",port:"outHW"}).
 das_fact(connection, cell_6, cell_9).
-das_fact(sender, cell_9, sender{component:"hello",port:"outh"}).
-das_fact(receiver, cell_9, receiver{component:"world",port:"inw"}).
+das_fact(sender, cell_9, sender{component:"cell_7",port:"outh"}).
+das_fact(receiver, cell_9, receiver{component:"cell_12",port:"inw"}).
