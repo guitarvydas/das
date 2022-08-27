@@ -256,17 +256,17 @@ diagram_fact(target, cell_18, cVRvWxy9wkcLxyWbIS20__3).
 diagram_fact(target, cell_24, cVRvWxy9wkcLxyWbIS20__3).
 diagram_fact(target, cell_9, i5jZ3dy8F4nkPbaXPHF6__9).
 diagram_fact(value, cell_11, "outh").
-diagram_fact(value, cell_12, "world2").
+diagram_fact(value, cell_12, "world").
 diagram_fact(value, cell_13, "inw").
 diagram_fact(value, cell_14, "&lt;br&gt;&lt;div&gt;&lt;/div&gt;").
 diagram_fact(value, cell_16, "go").
 diagram_fact(value, cell_17, "inh").
 diagram_fact(value, cell_19, "outw").
 diagram_fact(value, cell_20, "outHW").
-diagram_fact(value, cell_21, "world3").
-diagram_fact(value, cell_22, "inw3").
+diagram_fact(value, cell_21, "world").
+diagram_fact(value, cell_22, "inw").
 diagram_fact(value, cell_23, "&lt;br&gt;&lt;div&gt;&lt;/div&gt;").
-diagram_fact(value, cell_25, "outw3").
+diagram_fact(value, cell_25, "outw").
 diagram_fact(value, cell_6, "hwhw").
 diagram_fact(value, cell_7, "hello").
 diagram_fact(value, cell_8, "&lt;br&gt;&lt;div&gt;&lt;/div&gt;").
@@ -372,20 +372,35 @@ das_fact(kind,cell_7,rectangle).
 das_fact(kind,cell_8,rectangle).
 das_fact(kind,cell_9,edge).
 das_fact(name, cell_11, "outh").
-das_fact(name, cell_12, "world2").
+    das_fact(kindtype, cell_11, "outh").
+das_fact(name, cell_12, "world").
+    das_fact(kindtype, cell_12, "world").
 das_fact(name, cell_13, "inw").
+    das_fact(kindtype, cell_13, "inw").
 das_fact(name, cell_14, "&lt;br&gt;&lt;div&gt;&lt;/div&gt;").
+    das_fact(kindtype, cell_14, "&lt;br&gt;&lt;div&gt;&lt;/div&gt;").
 das_fact(name, cell_16, "go").
+    das_fact(kindtype, cell_16, "go").
 das_fact(name, cell_17, "inh").
+    das_fact(kindtype, cell_17, "inh").
 das_fact(name, cell_19, "outw").
+    das_fact(kindtype, cell_19, "outw").
 das_fact(name, cell_20, "outHW").
-das_fact(name, cell_21, "world3").
-das_fact(name, cell_22, "inw3").
+    das_fact(kindtype, cell_20, "outHW").
+das_fact(name, cell_21, "world").
+    das_fact(kindtype, cell_21, "world").
+das_fact(name, cell_22, "inw").
+    das_fact(kindtype, cell_22, "inw").
 das_fact(name, cell_23, "&lt;br&gt;&lt;div&gt;&lt;/div&gt;").
-das_fact(name, cell_25, "outw3").
+    das_fact(kindtype, cell_23, "&lt;br&gt;&lt;div&gt;&lt;/div&gt;").
+das_fact(name, cell_25, "outw").
+    das_fact(kindtype, cell_25, "outw").
 das_fact(name, cell_6, "hwhw").
+    das_fact(kindtype, cell_6, "hwhw").
 das_fact(name, cell_7, "hello").
+    das_fact(kindtype, cell_7, "hello").
 das_fact(name, cell_8, "&lt;br&gt;&lt;div&gt;&lt;/div&gt;").
+    das_fact(kindtype, cell_8, "&lt;br&gt;&lt;div&gt;&lt;/div&gt;").
 das_fact(color,cell_10,"-").
 das_fact(color,cell_11,"yellow").
 das_fact(color,cell_12,"-").
@@ -534,16 +549,16 @@ das_fact(codebox,cell_23,"&lt;br&gt;&lt;div&gt;&lt;/div&gt;").
 das_fact(codebox,cell_8,"&lt;br&gt;&lt;div&gt;&lt;/div&gt;").
 das_fact(connection, cell_6, cell_10).
 das_fact(sender, cell_10, sender{component:"hello",port:"outh"}).
-das_fact(receiver, cell_10, receiver{component:"world3",port:"inw3"}).
+das_fact(receiver, cell_10, receiver{component:"world",port:"inw"}).
 das_fact(connection, cell_6, cell_15).
 das_fact(sender, cell_15, sender{component:"hwhw",port:"go"}).
 das_fact(receiver, cell_15, receiver{component:"hello",port:"inh"}).
 das_fact(connection, cell_6, cell_18).
-das_fact(sender, cell_18, sender{component:"world2",port:"outw"}).
+das_fact(sender, cell_18, sender{component:"world",port:"outw"}).
 das_fact(receiver, cell_18, receiver{component:"hwhw",port:"outHW"}).
 das_fact(connection, cell_6, cell_24).
-das_fact(sender, cell_24, sender{component:"world3",port:"outw3"}).
+das_fact(sender, cell_24, sender{component:"world",port:"outw"}).
 das_fact(receiver, cell_24, receiver{component:"hwhw",port:"outHW"}).
 das_fact(connection, cell_6, cell_9).
 das_fact(sender, cell_9, sender{component:"hello",port:"outh"}).
-das_fact(receiver, cell_9, receiver{component:"world2",port:"inw"}).
+das_fact(receiver, cell_9, receiver{component:"world",port:"inw"}).

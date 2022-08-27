@@ -8,7 +8,7 @@ class _build (mpos.Leaf):
 
     def __init__ (self, dispatcher, parent, idInParent):
         super ().__init__ (dispatcher, parent, idInParent)
-        self.inputs=['go2']
+        self.inputs=['go']
         self.outputs=['quit']
     def react (self, inputMessage):
         import subprocess
