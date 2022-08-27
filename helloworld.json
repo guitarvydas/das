@@ -13,7 +13,7 @@
   ],
   [
     {
-      "children": ["cell_11", "cell_7" ],
+      "children": [ {"kind":"world", "name":"cell_11"},  {"kind":"hello", "name":"cell_7"} ],
       "connections": [
 	{
 	  "receivers": [ {"receiver": {"component":"cell_11", "port":"cell_12"}} ],
