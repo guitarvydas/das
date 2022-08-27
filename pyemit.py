@@ -127,7 +127,8 @@ def formatMap (children):
   # print children surrounded by dq's (is there a better way to do this in Python?)
   mchildren = []
   i = 0
-  for childname in children:
+  for childdescriptor in children:
+    childname = childdescriptor['name']
     mchildren.append ("'" + str (childname) + "'" + ":child" + str (i))
     i += 1
   return mchildren
@@ -171,7 +172,8 @@ def printContainerScript (component, outf):
 
   printCommonImports (component, outf)
   for child in component ["children"]:
-    print (f'import {child}', file=outf)
+    print (child)
+    print (f'import {child["kind"]}', file=outf)
 
   printCommonInit (component, outf, "Container")
 
@@ -183,8 +185,10 @@ def printContainerScript (component, outf):
   print (file=outf)
 
   j = 0
-  for childname in children:
-    print (f'        child{j} = {childname}._{childname} (dispatcher, self, \'{childname}\')', file=outf)
+  for childdescriptor in children:
+    childname = childdescriptor["name"]
+    childkind = childdescriptor["kind"]
+    print (f'        child{j} = {childkind}._{childkind} (dispatcher, self, \'{childname}\')', file=outf)
     j += 1
 
   i = 0

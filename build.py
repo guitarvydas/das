@@ -8,8 +8,8 @@ class _build (mpos.Leaf):
 
     def __init__ (self, dispatcher, parent, idInParent):
         super ().__init__ (dispatcher, parent, idInParent)
-        self.inputs=['go']
-        self.outputs=['quit']
+        self.inputs=['cell_22']
+        self.outputs=['cell_24']
     def react (self, inputMessage):
         import subprocess
         r = subprocess.run (["make", "helloworld.py"])

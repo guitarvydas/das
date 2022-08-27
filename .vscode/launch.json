@@ -10,8 +10,19 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "helloworld",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
             "justMyCode": true,
-            "args" : ["d2py.json", "d2py"]
+            "args": [
+                "helloworld.json",
+                "helloworld"
+            ]
         }
     ]
 }
