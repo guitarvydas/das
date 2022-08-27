@@ -35,7 +35,7 @@ checkPortHasDirection(X):-
     format("FATAL: port ~w does not have a direction~n",[X]).
 
 inferPortDirections:-
-    bagof(X,(diagram_fact(kind,X,"ellipse"),inferPort(X)),_).
+    setof(X,(diagram_fact(kind,X,"ellipse"),inferPort(X)),_).
 
 designRulePortsHaveDirection:-
     forall(diagram_fact(kind,X,"ellipse"),

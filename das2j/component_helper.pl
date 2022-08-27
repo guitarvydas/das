@@ -11,7 +11,7 @@ hasnoparent(R):-
     \+ das_fact(contains,_,R).
 
 inputs(R,Inputs):-
-    bagof(In, inputof(R,In), Inputs),!.
+    setof(In, inputof(R,In), Inputs),!.
 inputs(_,[]).
 
 inputof(R,In):-
@@ -24,7 +24,7 @@ nameof(ID,Name):-
     das_fact(name,ID,Name).
 
 outputs(R,Outputs):-
-    bagof(In, outputof(R,In), Outputs),!.
+    setof(In, outputof(R,In), Outputs),!.
 outputs(_,[]).
 
 outputof(R,Out):-
@@ -34,7 +34,7 @@ outputof(R,Out):-
     nameof(OutputID,Out).
 
 
-children(R,Children):-bagof(Child,childof(R,Child),Children),!.
+children(R,Children):-setof(Child,childof(R,Child),Children),!.
 children(_,[]).
 
 childof(R,Child):-

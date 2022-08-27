@@ -8,7 +8,7 @@ class _tools (mpos.Leaf):
 
     def __init__ (self, dispatcher, parent, idInParent):
         super ().__init__ (dispatcher, parent, idInParent)
-        self.inputs=['go1']
+        self.inputs=['go']
         self.outputs=['baton', 'quit']
     def react (self, inputMessage):
         import subprocess
