@@ -13,19 +13,19 @@
   ],
   [
     {
-      "children": ["world", "hello" ],
+      "children": ["hello", "world" ],
       "connections": [
 	{
 	  "receivers": [ {"receiver": {"component":"hello", "port":"inh"}} ],
 	  "senders": [ {"sender": {"component":"hw", "port":"go"}} ]
 	},
 	{
-	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
-	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
-	},
-	{
 	  "receivers": [ {"receiver": {"component":"world", "port":"inw"}} ],
 	  "senders": [ {"sender": {"component":"hello", "port":"outh"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"hw", "port":"outHW"}} ],
+	  "senders": [ {"sender": {"component":"world", "port":"outw"}} ]
 	}
       ],
       "id":"cell_6",
