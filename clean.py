@@ -8,8 +8,8 @@ class _clean (mpos.Leaf):
 
     def __init__ (self, dispatcher, parent, idInParent):
         super ().__init__ (dispatcher, parent, idInParent)
-        self.inputs=['go']
-        self.outputs=['baton', 'quit']
+        self.inputs=['cell_28']
+        self.outputs=['cell_14', 'cell_16']
     def react (self, inputMessage):
         import subprocess
         r = subprocess.run (["make", "clean"])

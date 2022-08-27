@@ -8,7 +8,7 @@ class _abort (mpos.Leaf):
 
     def __init__ (self, dispatcher, parent, idInParent):
         super ().__init__ (dispatcher, parent, idInParent)
-        self.inputs=['quit']
+        self.inputs=['cell_27']
         self.outputs=[]
     def react (self, inputMessage):
         self.quit (inputMessage.data)
