@@ -13,5 +13,5 @@
     diagram_fact(vertex,ID,_)
     diagram_fact(value,ID,Name)
 ## display
-    das_fact(name, ${ID}, \"${Name}\").
+    das_fact(deprecated_name, ${ID}, \"${Name}\").
     das_fact(kindtype, ${ID}, \"${Name}\").

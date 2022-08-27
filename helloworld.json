@@ -3,31 +3,31 @@
     {
       "children": [],
       "connections": [],
+      "deprecated_name":"world",
       "id":"cell_11",
-      "inputs": ["in" ],
+      "inputs": ["cell_12" ],
       "kind":"world",
-      "name":"world",
       "outputs": [],
       "synccode":"print (&quot;world&quot;)&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
     }
   ],
   [
     {
-      "children": ["hello", "world" ],
+      "children": ["cell_11", "cell_7" ],
       "connections": [
 	{
-	  "receivers": [ {"receiver": {"component":"hello", "port":"a"}} ],
-	  "senders": [ {"sender": {"component":"helloworld", "port":"go"}} ]
+	  "receivers": [ {"receiver": {"component":"cell_11", "port":"cell_12"}} ],
+	  "senders": [ {"sender": {"component":"cell_7", "port":"cell_10"}} ]
 	},
 	{
-	  "receivers": [ {"receiver": {"component":"world", "port":"in"}} ],
-	  "senders": [ {"sender": {"component":"hello", "port":"out"}} ]
+	  "receivers": [ {"receiver": {"component":"cell_7", "port":"cell_16"}} ],
+	  "senders": [ {"sender": {"component":"cell_6", "port":"cell_15"}} ]
 	}
       ],
+      "deprecated_name":"helloworld",
       "id":"cell_6",
-      "inputs": ["go" ],
+      "inputs": ["cell_15" ],
       "kind":"helloworld",
-      "name":"helloworld",
       "outputs": [],
       "synccode":""
     }
@@ -36,11 +36,11 @@
     {
       "children": [],
       "connections": [],
+      "deprecated_name":"hello",
       "id":"cell_7",
-      "inputs": ["a" ],
+      "inputs": ["cell_16" ],
       "kind":"hello",
-      "name":"hello",
-      "outputs": ["out" ],
+      "outputs": ["cell_10" ],
       "synccode":"print (&quot;hello&quot;)&lt;br&gt;self.send (&quot;out&quot;, True)&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
     }
   ]

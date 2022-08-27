@@ -20,8 +20,9 @@ inputof(R,In):-
     das_fact(direct_contains,R,InputID),
     nameof(InputID,In).
     
-nameof(ID,Name):-
-    das_fact(name,ID,Name).
+%% nameof(ID,Name):-
+%%     das_fact(name,ID,Name).
+nameof(ID,ID).
 
 outputs(R,Outputs):-
     setof(In, outputof(R,In), Outputs),!.
