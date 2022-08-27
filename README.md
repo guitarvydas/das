@@ -141,3 +141,10 @@ In this POC, we implement `mpos` using the synchronous language Python, and, the
         self.connections = [ conn0, conn1, conn2, conn3, conn4, conn5 ]
         self.children = {'abort':child0, 'tools':child1, 'build':child2, 'clean':child3}
 ```
+
+# Status
+The emitted JSON contains "kind" fields, now.
+
+The "name" field is not unique and is a synonym for "kind". I believe that "name" is going to be deprecated, as it no longer serves a useful purpose.
+
+The "id" field is unique.
