@@ -142,7 +142,6 @@ def remapName (component, selfname):
 def formatConnection (i, senderList, receiverList, selfname):
   senders = []
   for sender in senderList:
-    print (sender)
     component = f"{sender ['sender'] ['component']}"
     component = remapName (component, selfname)
     port = sender ['sender'] ['port']
@@ -198,9 +197,6 @@ def printContainerScript (component, outf):
     receiverList = conn ["receivers"]
     senderList = conn ["senders"]
 
-    print (senderList)
-    print (receiverList)
-    print (component)
     #cstr = formatConnection (i, senderList, receiverList, component["name"])
     cstr = formatConnection (i, senderList, receiverList, component["id"])
     print (f'        {cstr}', file=outf)
