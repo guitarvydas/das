@@ -5,7 +5,7 @@ NODEMODULES=\
 	node_modules/pako
 
 # change this for your own environment
-TOOLS=.
+TOOLS=$(CURDIR)
 
 all: $(NODEMODULES) tools helloworld.py topd2py.py hw.json hwhw.json
 
@@ -58,6 +58,11 @@ topd2py.py : d2py.json transpile2py.bash pyemit.py
 	./topd2py.py
 
 clean:
+	find . -name 'junk*' -exec rm -f '{}' ';'
+	find . -name 'temp_*' -exec rm -f '{}' ';'
+	find . -name '_*' -exec rm -f '{}' ';'
+	find . -name '*~' -exec rm -f '{}' ';'
+	find . -name '#*' -exec rm -f '{}' ';'
 	(cd ./dr ; make clean)
 	(cd ./prep ; make clean)
 	(cd ./d2f ; make clean)

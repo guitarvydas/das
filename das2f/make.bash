@@ -3,6 +3,7 @@
 # usage: ./make.bash <tools-root>
 
 root=$1
+echo 'root = ' $root
 
 here=`pwd`
 temp=temp_${RANDOM}
@@ -31,8 +32,11 @@ echo '-- layer5_query.bash generated --' 1>&2
 # chmod a+x layer6_query.bash
 # echo '-- layer6_query.bash generated --' 1>&2
 
-echo '-- layer6_query.bash not touched (copied) --' 1>&2
-cp manual_layer6_qry.bash layer6_query.bash
+#echo '-- layer6_query.bash not touched (copied) --' 1>&2
+#cp manual_layer6_qry.bash layer6_query.bash
+echo '-- layer6_query.bash (copied with dirname changed) --' 1>&2
+cat manual_layer6_qry.bash | sed -e "s!%%%/!$root/!"  >layer6_query.bash
+chmod a+x layer6_query.bash
 
 $prep '#+ query ' '#+ ' implicitforall.ohm implicitforall.glue  --support=$here/implicitforall.support.js <contains_edge1.md >preprocessed_contains_edge1.md
 $qd3 $root $here/qd3    preprocessed_contains_edge1 --prefix="$here/" >layeredgecontainment1_query.bash
@@ -102,7 +106,7 @@ echo '-- ' "design rules a-${fname} and b-${fname} generated" ' --' 1>&2
 
 
 
-baton1=baton
-rm -f ${baton1} && mkfifo ${baton1}
+# baton1=/tmp/baton
+# rm -f ${baton1} && mkfifo ${baton1}
 rm -r $temp
 

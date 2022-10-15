@@ -42,7 +42,7 @@ layersynccode_query.bash
 all: $(QUERIES)
 
 $(QUERIES) : $(QUERYSOURCES)
-	./build.bash ..
+	./build.bash `realpath ..`
 
 clean:
 	cp layer6 temp-layer6
@@ -53,4 +53,6 @@ clean:
 	rm -f b-dr-edgecontainment
 	rm -f out.json
 	rm -f view*.bash view*.pl view*.js
+	rm -f junk*.*
+	rm -f *~
 
